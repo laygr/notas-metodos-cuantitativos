@@ -1,0 +1,50 @@
+Title         : Notaspara Métodos cuantitativos
+Author        : Jesús Irais González Romero
+Logo          : True
+
+[TITLE]
+
+#El plano en tres dimensiones:
+Ejemplo de una ecuación paramétrica en $\Re^3$:
+
+~ MathPre
+x=\cos(t)
+y=\sin(t)
+z=t
+~
+[Gráfica 1]
+
+#Vectores
+Un vector es determinado por: dirección y magnitud (y a veces su origen).\
+Se puede describir con su punto final y asumir que el ángulo se abre respecto al horizonte
+$P(2,1/2)$
+
+## La ecuación vectorial
+Obtiene la recta determinada por un vector.\
+Suponiendo que se tiene un vector con origen: (1,2), dirección: (3,4) y magnitud 10, la ecuación vectorial derivada de dicho vector es:
+$\vec{r}(t)=(1,2)+t(3,4)$ Se ignora la magnitud, pues las líneas no tienen magnitud.
+
+# Recta en $\Re^3$
+\begin{Bmatrix}
+x(t) =& a + bt \\
+y(t) =& c + dt \\
+z(t) =& e + ft
+\end{Bmatrix}
+
+Donde se puede decir que el vector pasa por el punto P(a,c,e) con dirección (b,d,f).
+
+
+# Plano en \Re^3
+$Ax+By+Cz+D=0$ <- nos dice los puntos sobre el plano
+Vector normal al plano: inclinación del plano, inicia del origen
+El plano se puede obtener de 3 combinaciones lineales (que se intersectan) también llamadas trazas.
+
+## ¿Cómo dibujar un plano?
+Se obtienen las trazas $xy$, $xz$, $yz$.\
+Para obtener una traza, se iguala a cero la variable que no se encuentra en el nombre de la traza.
+Las curvas de nivel son las trazas que se obtienen al igualar $z=k$.
+
+Ejercicio:\
+Sea el plano $z=x^2+y^2$, dibuje las trazas ($xy$, $xz$, yz)
+
+[Gráfica 1]: https://www.wolframcloud.com/objects/aed63503-3f6a-4dc5-a2a7-b7e3417c0b09S
