@@ -25,21 +25,33 @@ Suponiendo que se tiene un vector con origen: (1,2), dirección: (3,4) y magnitu
 $\vec{r}(t)=(1,2)+t(3,4)$ Se ignora la magnitud, pues las líneas no tienen magnitud.
 
 # Recta en $\Re^3$
-\begin{Bmatrix}
-x(t) =& a + bt \\
-y(t) =& c + dt \\
-z(t) =& e + ft
-\end{Bmatrix}
+Está determinada por el punto $P(x_0,y_0,z_0)$ por donde pasa y la dirección en la que se mueve descrita por un vector $\vec{u}$.
+## Ecuación vectorial
+La ecuación vectorial de la recta $\vec{PX}$ que pasa por el punto $P(x_0,y_0,z_0)$ y en dirección del vector $\vec{u}$ es la siguiente:
+~ MathPre
+\vec{PX} &= \lambda \cdot \vec{u}
+(x-x_0,y-y_0,z-z_0) &= (\lambda u_1, \lambda u_2, \lambda u_3)
+(x,y,z) &= (x_0+\lambda u_1, y_0+\lambda u_2, z_0+\lambda u_3)
+~
+Su forma como ecuaciones paramétricas es:
 
-Donde se puede decir que el vector pasa por el punto P(a,c,e) con dirección (b,d,f).
+~ MathPre
+x(\lambda) =& x_0 + \vec{u_1} \lambda
+y(\lambda) =& y_0 + \vec{u_2} \lambda
+z(\lambda) =& z_0 + \vec{u_3} \lambda
+~
 
+# Plano en $\Re^3$
+## Puntos (x,y,z) sobre un plano
+$Ax+By+Cz+D=0$
+## Vector normal al plano
+- Nos da la inclinación del plano
+- Inicia del origen
 
-# Plano en \Re^3
-$Ax+By+Cz+D=0$ <- nos dice los puntos sobre el plano
-Vector normal al plano: inclinación del plano, inicia del origen
-El plano se puede obtener de 3 combinaciones lineales (que se intersectan) también llamadas trazas.
+## El plano en términos de trazas
+El plano se puede obtener de 3 combinaciones lineales (que se intersectan) también llamadas **trazas**.
 
-## ¿Cómo dibujar un plano?
+### ¿Cómo dibujar un plano mediante las trazas?
 Se obtienen las trazas $xy$, $xz$, $yz$.\
 Para obtener una traza, se iguala a cero la variable que no se encuentra en el nombre de la traza.
 Las curvas de nivel son las trazas que se obtienen al igualar $z=k$.
