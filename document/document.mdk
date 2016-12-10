@@ -33,6 +33,17 @@ El teorema de derivadas implícitas dice que se puede obtener $\frac{\partial x(
 \frac{\partial x(y)}{\partial y}=-\frac{\partial f(x,y)}{\partial y} / \frac{\partial f(x,y)}{\partial x}
 ~
 es decir, no se tiene que despejar $x$ o $y$ de $f(x,y)$ para obtener sus derivadas.
+### Regla de la cadena
+Si se construye un grafo de las dependencias de una función, entonces:
+Los segmentos del camino se multiplican
+Los caminos se suman
+
+### Puntos críticos:
+Si f(x,y) está definida en (x0,y0) y ∇f(x0,y0) no existe, (x0,y0) es un punto crítico de f.
+### Concavidad:
+Dado dos puntos, la función pasa por arriba del segmento de la recta que une dichos puntos.
+### Concavidad no estricta:
+Dados dos puntos, la función pasa por arriba o es el segmento de la recta que une dichos puntos
 
 #El plano en tres dimensiones:
 Ejemplo de una ecuación paramétrica en $\Re^3$:
@@ -137,6 +148,10 @@ Las curvas de nivel son las trazas que se obtienen al igualar $z=k$.
 Ejercicio:\
 Sea el plano $z=x^2+y^2$, dibuje las trazas ($xy$, $xz$, yz)
 
-# Más vectores
-
+## Teorema de Euler sobre funciones homogeneas
+Teorema de Euler sobre funciones homogéneas:$
+Si $f=f(x,y,z)$ es una función homogénea de grado $k$, entonces:
+$f(\lambda x, \lambda y, \lambda z)=\lambda^kf(x,y,z)$
+y
+$k=\frac{\sum_{i=1}x_i(\frac {\partial f}{\partial x_i})}{f}$
 [Gráfica 1]: https://www.wolframcloud.com/objects/aed63503-3f6a-4dc5-a2a7-b7e3417c0b09S
