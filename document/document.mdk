@@ -4,6 +4,36 @@ Logo          : True
 
 [TITLE]
 
+# Derivadas
+~ MathPre
+\frac{\partial f(x)}{\partial x} &\approx \frac{\Delta f(x)}{\Delta x}
+\text{Multiplicando por} \frac{x}{f(x)}:&
+\frac{\partial f(x)}{\partial x}\frac{x}{f(x)} &\approx \frac{\Delta f(x)}{\Delta x}\frac{x}{f(x)}
+                                               &\approx \frac{\Delta f(x)}{f(x)}\frac{x}{\Delta x}
+                                               &\approx \frac{\Delta \% f(x)}{\Delta \% x}
+~
+Donde $\frac{\partial f(x)}{\partial x}\frac{x}{f(x)}$ es la elasticidad $E_{f(x),x}$ en el punto $x$; es decir:
+$E_{f(x),x} \approx \frac{\Delta \% f(x)}{\Delta \% x}$\
+## Resultados:
+~ MathPre
+\Delta f(x) &\approx \frac{\partial f(x)}{\partial x} \Delta x
+f(x_1) &\approx \frac{\partial f(x)}{\partial x} \Delta x + f(x_0) \leftarrow \text{linearización}
+\Delta \% f(x) &\approx E_{f(x),x} \Delta \% x
+\Delta f(x) &\approx E_{f(x),x} \frac{\Delta \% x}{f(x)}
+f(x_1) &\approx E_{f(x),x} \frac{\Delta \% x}{f(x)} + f(x_0) \leftarrow \text{linearización mediante elasticidades}
+~
+$\Delta x$ se denotará como $x-x_0$
+## Derivadas parciales
+$\frac{\partial f}{\partial x}=f_x(x,y)$\
+$\frac{\partial f}{\partial y}=f_y(x,y)$\
+## Derivadas implícitas
+Supongamos que se tiene f(x,y)=c. Se puede resolver para x(y) o para y(x) y por lo tanto se puede obtener $\frac{\partial x(y)}{\partial y}$ derivando $x(y)$ respecto a $y$.\
+El teorema de derivadas implícitas dice que se puede obtener $\frac{\partial x(y)}{\partial y}$ de la siguiente manera:
+~ Equation { #eq-prope }
+\frac{\partial x(y)}{\partial y}=-\frac{\partial f(x,y)}{\partial y} / \frac{\partial f(x,y)}{\partial x}
+~
+es decir, no se tiene que despejar $x$ o $y$ de $f(x,y)$ para obtener sus derivadas.
+
 #El plano en tres dimensiones:
 Ejemplo de una ecuación paramétrica en $\Re^3$:
 
@@ -16,8 +46,56 @@ z=t
 
 #Vectores
 Un vector es determinado por: dirección y magnitud (y a veces su origen).\
-Se puede describir con su punto final y asumir que el ángulo se abre respecto al horizonte
-$P(2,1/2)$
+Se puede describir con su punto final y asumir que el ángulo se abre respecto al horizonte:\
+$P(2,1/2)$ o $\vec{u}=(2,1/2)$ donde $u_1=2, u_2=1/2$
+## Magnitud o módulo
+$|\vec{u}|=\sqrt{u^2_1 + u^2_2}$
+
+## Producto por un escalar
+$\alpha\vec{u}=\alpha(u_1,u_2)=(\alpha u_1,\alpha u_2)$
+
+## Producto punto
+$\vec{u}\cdot\vec{v}=u_1v_1+u_2v_2$\
+Si $\vec{u}\bot\vec{v}$ (si son perpendiculares), entonces $\vec{u}\cdot\vec{v}=0$
+"El producto de dos vectores no nulos es igual al módulo de uno de ellos por la proyección del otro sobre él."
+## Vector unitario
+$\hat{v}=\frac{\vec{v}}{|\vec{v}|}$
+## Vector gradiente
+$\nabla f(x_0,y_0)=\bigg(\frac{\partial f(x_0,y_0)}{\partial x},\frac{\partial f(x_0,y_0)}{\partial y}\bigg)$
+## Derivada direccional
+La derivada direccional de una función $f(x_1,x_2,\dotsc,x_n)$ en la dirección del vector $\vec{v}=(v_1,v_2,\dotsc,v_n)$
+es la función definida por el límite: $D_{\vec{v}}f=\lim_{h \to 0} \frac{f(\vec{x}+h\vec{v})-f(\vec{x})}{h}$; si $f$ es diferenciable, lo pasado se puede expresar de la siguiente manera: $D_{\vec{v}}f=\nabla f \cdot \vec{v}$ (el producto escalar entre el gradiente de $f$ y $\vec{v}$).
+### Derivada direccional de magnitud unitaria (la vista en clase)
+$D_{\vec{v}}f=\lim_{h\to 0} \frac{f({\bf x}+h {\bf v})-f({\bf x})}{h {\bf\|v\|}}$\
+$D_{\vec{v}}f=\nabla f(\bf x)\cdot \frac{\bf v}{\|\bf v\|}$\
+Que en general es:\
+$D_{\hat{v}}f=\nabla f(\bf x)\cdot \hat{v}$
+
+## Plano tangente y linearización
+El plano tangente se puede obtener para funciones explícitas e implícitas:
+### Plano tangente para funciones explícitas
+Sea $z$ la función explícita $z=f(x,y)$. Su plano tangente en $P(x_0,y_0,z_0)$ (linearización), $\Pi$, está definido como:
+$\Pi:z-z_0=\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0)$,
+o lo que es lo mismo:
+$\Pi:\nabla f(x_0,y_0,z_0)\cdot (x-x_0,y-y_0,z-z_0)=0$,
+donde $\nabla f=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}, -1)$\
+La recta normal está definida por:
+$\frac{x-x_0}{(\frac{\partial F}{\partial x})_P}=\frac{y-y_0}{(\frac{\partial F}{\partial y})_P}=\frac{z-z_0}{-1}$\
+**¡Se vio una expresión similar a la expresión para $\Pi$ en la sección de derivadas!** Sólo se está extendiendo para funciones de más de una variable. Y el resultado es la linearización.
+
+### Plano tangente para funciones implícitas
+Sea $f(x,y,z)=0$ una función implícita; su plano tangente en $P(x_0,y_0,z_0)$ está definido como:
+$\frac{\partial f}{\partial x}(x-x_0) + \frac{\partial f}{\partial y}(y-y_0)+\frac{\partial f}{\partial z}(z-z_0)=0$\
+La recta normal está definida por: $\frac{x-x_0}{(\frac{\partial F}{\partial x})_P}=\frac{y-y_0}{(\frac{\partial F}{\partial y})_P}=\frac{z-z_0}{(\frac{\partial F}{\partial z})_P}$
+
+
+
+### Linearización mediante el polinomio de Taylor:
+Polinomio de Taylor de grado 1 para d dimensiones:\
+$L_1=f(\vec{a}) + \sum_{i=1}^d \frac{\partial f}{\partial x_i} (\vec{a})(x_i - a_i)$\
+Por lo que $L_1-f(P)=\Pi$\
+Polinomio de Taylor de grado 2 para d dimensiones:\
+$f(\vec{a})+\sum^d_{i=1}\frac{\partial f}{\partial x_i}(\vec{a})(x_i-a_i)+\frac{1}{2}\sum^d_{i=1}\sum^d_{j=1}\frac{\partial^2 f}{\partial x_i \partial x_j}(\vec{a})(x_i-a_i)(x_j-a_j)$
 
 ## La ecuación vectorial
 Obtiene la recta determinada por un vector.\
@@ -53,10 +131,12 @@ El plano se puede obtener de 3 combinaciones lineales (que se intersectan) tambi
 
 ### ¿Cómo dibujar un plano mediante las trazas?
 Se obtienen las trazas $xy$, $xz$, $yz$.\
-Para obtener una traza, se iguala a cero la variable que no se encuentra en el nombre de la traza.
+Para obtener una traza, se iguala a cero la variable que no se encuentra en el nombre de la traza; por ejemplo, para encontrar la traza $xy$, se impone $z=0$.
 Las curvas de nivel son las trazas que se obtienen al igualar $z=k$.
 
 Ejercicio:\
 Sea el plano $z=x^2+y^2$, dibuje las trazas ($xy$, $xz$, yz)
+
+# Más vectores
 
 [Gráfica 1]: https://www.wolframcloud.com/objects/aed63503-3f6a-4dc5-a2a7-b7e3417c0b09S
