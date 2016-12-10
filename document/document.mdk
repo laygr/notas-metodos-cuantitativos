@@ -149,9 +149,8 @@ Ejercicio:\
 Sea el plano $z=x^2+y^2$, dibuje las trazas ($xy$, $xz$, yz)
 
 ## Teorema de Euler sobre funciones homogeneas
-Teorema de Euler sobre funciones homogéneas:$
-Si $f=f(x,y,z)$ es una función homogénea de grado $k$, entonces:
-$f(\lambda x, \lambda y, \lambda z)=\lambda^kf(x,y,z)$
+Si $f=f(x,y,z)$ es una función homogénea de grado $k$, entonces:\
+$f(\lambda x, \lambda y, \lambda z)=\lambda^kf(x,y,z)$\
 y
-$k=\frac{\sum_{i=1}x_i(\frac {\partial f}{\partial x_i})}{f}$
+$k=\frac{\sum_{i=1}x_i(\frac {\partial f}{\partial x_i})}{f}$\
 [Gráfica 1]: https://www.wolframcloud.com/objects/aed63503-3f6a-4dc5-a2a7-b7e3417c0b09S
